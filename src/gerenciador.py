@@ -1,7 +1,7 @@
 import json
 import os
 
-ARQUIVO_DADOS = 'tarefas.json'
+ARQUIVO_DADOS = 'dados.json'
 
 def carregar_tarefas():
     if not os.path.exists(ARQUIVO_DADOS):

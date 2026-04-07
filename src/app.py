@@ -28,6 +28,7 @@ class MindClearApp:
         self.atualizar_lista()
 
     def adicionar(self):
+
         descricao = self.entrada_tarefa.get()
         try:
             gerenciador.adicionar_tarefa(descricao)
