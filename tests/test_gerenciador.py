@@ -1,15 +1,5 @@
-import gerenciador
+from src import gerenciador
 import pytest
-import os
-import sys
-
-# Garante que a pasta src seja encontrada pelos testes
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.dirname(__file__),
-            '../src')))
 
 # Antes de cada teste, limpamos o banco de dados temporário
 
