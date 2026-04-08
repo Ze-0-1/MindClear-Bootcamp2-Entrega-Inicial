@@ -71,7 +71,8 @@ Para verificar a padronização do código (Linting):
 python -m flake8 src/ tests/
 ```
 
-Nota: Se os comandos python não funcionarem tente "py" exemplo: 
+## Nota:
+Se os comandos python não funcionarem tente "py" exemplo: 
 ```bash
 py src/app.py 
 ```
