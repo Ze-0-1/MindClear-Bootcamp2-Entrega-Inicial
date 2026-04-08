@@ -44,3 +44,39 @@ Certifique-se de ter o [Python](https://www.python.org/) instalado em sua máqui
 ```bash
 git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
 cd SEU_REPOSITORIO
+
+### 2. Instalar dependências
+O projeto principal utiliza apenas bibliotecas nativas do Python. As dependências externas são exclusivas para o ambiente de testes e linting.
+```bash
+pip install -r requirements.txt
+
+### 3. Executar a aplicação
+Estando na raiz do projeto, execute o comando abaixo para abrir a interface gráfica:
+```bash
+python src/app.py
+
+---
+
+## 🧪 Como rodar os Testes e o Linting
+
+Este projeto segue boas práticas de Engenharia de Software, garantindo a qualidade do código através de testes automatizados e análise estática.
+
+Para executar os testes automatizados:
+
+```bash
+python -m pytest tests/
+
+Para verificar a padronização do código (Linting):
+```bash
+python -m flake8 src/ tests/
+
+
+Nota: Este projeto possui uma pipeline configurada no GitHub Actions que executa automaticamente esses comandos a cada push no repositório.
+
+
+## 🧪 Autor e Informações Acadêmicas
+Nome do Aluno: José Gabriel Ribeiro Cecilio
+
+Projeto: MindClear - Organizador de Rotina
+
+Link do Repositório: https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git
