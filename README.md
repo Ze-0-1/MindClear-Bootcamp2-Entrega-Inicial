@@ -70,6 +70,7 @@ Para verificar a padronização do código (Linting):
 ```bash
 python -m flake8 src/ tests/
 ```
+Nota: Este projeto possui uma pipeline configurada no GitHub Actions que executa automaticamente esses comandos a cada push no repositório.
 
 ## Nota:
 Se os comandos python não funcionarem tente "py" exemplo: 
@@ -77,7 +78,7 @@ Se os comandos python não funcionarem tente "py" exemplo:
 py src/app.py 
 ```
 
-Nota: Este projeto possui uma pipeline configurada no GitHub Actions que executa automaticamente esses comandos a cada push no repositório.
+
 
 
 ## Autor e Informações Acadêmicas
