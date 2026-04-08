@@ -1,0 +1,12 @@
+# Caches do Python e de Testes
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Arquivos de banco de dados local (para não vazar suas tarefas pro GitHub)
+tarefas.json
+dados.json
+
+# Ambientes virtuais (boa prática do Python)
+venv/
+env/
