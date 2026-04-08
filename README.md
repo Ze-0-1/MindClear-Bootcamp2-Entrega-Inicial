@@ -42,8 +42,7 @@ Certifique-se de ter o [Python](https://www.python.org/) instalado em sua máqui
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
-cd SEU_REPOSITORIO](https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git)
+https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git
 ```
 
 ### 2. Instalar dependências
