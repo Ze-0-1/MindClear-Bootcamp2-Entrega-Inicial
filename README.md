@@ -59,7 +59,7 @@ python src/app.py
 
 ## Como rodar os Testes e o Linting
 
-Este projeto segue boas práticas de Engenharia de Software, garantindo a qualidade do código através de testes automatizados e análise estática.
+Este projeto segue boas práticas de Engenharia de Software, garantindo a qualidade do código através de testes automatizados e análise estática.asdasd
 
 Para executar os testes automatizados:
 
