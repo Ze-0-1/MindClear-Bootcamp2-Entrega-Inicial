@@ -1,8 +1,10 @@
 # src/app.py
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import gerenciador
-import os
 
 app = Flask(__name__)
 

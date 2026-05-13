@@ -1,7 +1,12 @@
 import json
 import os
 
-ARQUIVO_DADOS = 'dados.json'
+# Se estiver rodando na Vercel, usa a pasta temporária permitida.
+# Caso contrário, continua usando o arquivo local normal.
+if os.environ.get('VERCEL'):
+    ARQUIVO_DADOS = '/tmp/dados.json'
+else:
+    ARQUIVO_DADOS = 'dados.json'
 
 
 def carregar_tarefas():
