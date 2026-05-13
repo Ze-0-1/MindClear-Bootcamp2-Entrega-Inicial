@@ -1,89 +1,75 @@
 # MindClear: Organizador de Rotina para Redução de Carga Mental
-**Versão:** 1.0.0
+**Versão:** 2.0.0 (Etapa Intermediária - Bootcamp)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://mind-clear-bootcamp2-entrega-inicia.vercel.app/)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Framework](https://img.shields.io/badge/framework-Flask-lightgrey)
 
-## Visão Geral
-O **MindClear** é uma aplicação desktop minimalista desenvolvida em Python. Seu objetivo é ajudar pessoas a gerenciar suas rotinas diárias de forma simples e direta, aliviando a carga cognitiva gerada pelo excesso de informações e compromissos.
-
-## O Problema Real
-Na sociedade moderna, o acúmulo de pequenas tarefas diárias (comprar itens básicos, tomar medicamentos, enviar um e-mail importante, beber água) gera o que a psicologia chama de **sobrecarga mental** ou **fadiga decisória**. Tentar memorizar todas as micro-tarefas do dia a dia aumenta os níveis de ansiedade e reduz o foco e a produtividade.
-
-## A Solução
-O MindClear atua como um "segundo cérebro" temporário. Através de uma interface limpa e sem distrações visuais, o usuário pode descarregar rapidamente suas pendências e marcá-las como concluídas. Ao retirar a necessidade de "lembrar" das coisas, o usuário ganha espaço mental para focar na "execução".
-
-## Público-Alvo
-* Pessoas com rotinas sobrecarregadas ou que sofrem de estresse/ansiedade devido ao acúmulo de tarefas.
-* Pessoas neurodivergentes (ex: TDAH) que se beneficiam de listas visuais e recompensas imediatas (marcar como concluído).
-* Cuidadores e profissionais que precisam gerenciar múltiplos pequenos afazeres ao longo do dia.
-
-## Funcionalidades Principais
-* **Cadastro rápido:** Adição de tarefas em uma interface limpa.
-* **Visualização clara:** Lista estruturada separando o que está pendente do que foi concluído.
-* **Conclusão de tarefas:** Marcação de itens com feedback visual.
-* **Privacidade e Leveza:** Armazenamento de dados local (arquivo `.json`), sem necessidade de internet ou contas em nuvem.
-
-## Tecnologias Utilizadas
-* **Linguagem:** Python 3.10+
-* **Interface Gráfica (GUI):** Tkinter (Nativo do Python)
-* **Armazenamento:** JSON (Manipulação de arquivos locais)
-* **Testes Automatizados:** `pytest`
-* **Análise Estática (Linting):** `flake8`
-* **Integração Contínua (CI):** GitHub Actions
+## 🌐 Link do Deploy (Acesso Público)
+**Acesse a aplicação online aqui:** [https://mind-clear-bootcamp2-entrega-inicia.vercel.app/](https://mind-clear-bootcamp2-entrega-inicia.vercel.app/)
 
 ---
 
-## Como Instalar e Executar
+## 📋 Visão Geral
+O **MindClear** evoluiu de uma aplicação desktop para uma plataforma web minimalista. O objetivo permanece o mesmo: servir como um "segundo cérebro" para descarregar micro-tarefas diárias, reduzindo a fadiga decisória e a ansiedade. Nesta versão, o sistema integra-se com serviços externos para oferecer pílulas de sabedoria ao utilizador durante a sua jornada de organização.
 
-### Pré-requisitos
-Certifique-se de ter o [Python](https://www.python.org/) instalado em sua máquina (versão 3.10 ou superior).
+## 🚀 Novidades da Etapa Intermediária
+Nesta fase de evolução, o projeto implementou padrões profissionais de desenvolvimento:
+* **Migração para Web:** Substituição da interface Tkinter por **Flask**, permitindo acesso via navegador e hospedagem em nuvem.
+* **Consumo de API Pública (Advice Slip):** A cada carregamento, a aplicação busca um conselho aleatório para motivar o utilizador.
+* **Integração com API de Tradução (MyMemory):** Como a API de conselhos é nativa em inglês, implementamos um fluxo de tradução em tempo real para exibir os conteúdos em Português (PT-BR).
+* **Testes de Integração:** Criação de testes automatizados para validar a comunicação com os serviços externos de API.
+* **CI/CD:** Pipeline configurada via GitHub Actions e deploy automático via Vercel.
+
+## 🛠️ Tecnologias Utilizadas
+* **Back-end:** Python 3.10+ e Flask.
+* **Front-end:** HTML5 e CSS3 (Jinja2 Templates).
+* **APIs Externas:** * [Advice Slip API](https://api.adviceslip.com/) (Conselhos).
+  * [MyMemory API](https://mymemory.translated.net/) (Tradução).
+* **Persistência:** JSON (Manipulação de arquivos locais/temporários).
+* **Qualidade:** `pytest` (Testes unitários e de integração) e `flake8` (Linting).
+* **Infraestrutura:** GitHub Actions (CI) e Vercel (Hospedagem/Deploy).
+
+---
+
+## ⚙️ Como Instalar e Executar Localmente
 
 ### 1. Clonar o repositório
 ```bash
-https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git
+git clone [https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git](https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git)
+cd MindClear-Bootcamp2-Entrega-Inicial
 ```
 
 ### 2. Instalar dependências
-O projeto principal utiliza apenas bibliotecas nativas do Python. As dependências externas são exclusivas para o ambiente de testes e linting.
 ```bash
 pip install -r requirements.txt
 ```
+
 ### 3. Executar a aplicação
-Estando na raiz do projeto, execute o comando abaixo para abrir a interface gráfica:
 ```bash
 python src/app.py
 ```
+Acesse `http://127.0.0.1:5000` no seu navegador.
+
 ---
 
-## Como rodar os Testes e o Linting
+## 🧪 Qualidade de Código
 
-Este projeto segue boas práticas de Engenharia de Software, garantindo a qualidade do código através de testes automatizados e análise estática.
-
-Para executar os testes automatizados:
-
+### Rodar Testes Automatizados
+O projeto inclui testes de integração que validam o fluxo com as APIs externas (usando mocks para garantir estabilidade no CI).
 ```bash
 python -m pytest tests/
 ```
-Para verificar a padronização do código (Linting):
+
+### Verificação de Linting (Padrões de Código)
 ```bash
 python -m flake8 src/ tests/
 ```
-Nota: Este projeto possui uma pipeline configurada no GitHub Actions que executa automaticamente esses comandos a cada push no repositório.
 
-## Nota:
-Se os comandos python não funcionarem tente "py" exemplo: 
-```bash
-py src/app.py 
-```
+---
 
-
-
-
-## Autor e Informações Acadêmicas
-Nome do Aluno: José Gabriel Ribeiro Cecilio
-
-Projeto: MindClear - Organizador de Rotina
-
-Link do Repositório: https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git
+## 👤 Autor e Informações Acadêmicas
+* **Nome:** José Gabriel Ribeiro Cecilio
+* **Projeto:** MindClear - Etapa 2 (Evolução: API, Testes e Deploy)
+* **Repositório:** [GitHub Repo](https://github.com/Ze-0-1/MindClear-Bootcamp2-Entrega-Inicial.git)
